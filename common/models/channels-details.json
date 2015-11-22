@@ -1,0 +1,202 @@
+{
+    "name": "ChannelsDetails",
+    "base": "PersistedModel",
+    "idInjection": false,
+    "options": {
+        "validateUpsert": true
+    },
+    "postgresql": {
+        "schema": "public",
+        "table": "channels_details"
+    },
+    "properties": {
+        "transmissionPower": {
+            "type": "Number",
+            "generated": true,
+            "required": false,
+            "length": null,
+            "precision": 64,
+            "scale": 0,
+            "postgresql": {
+                "columnName": "transmission_power",
+                "dataType": "bigint",
+                "dataLength": null,
+                "dataPrecision": 64,
+                "dataScale": 0,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "id": {
+            "type": "Number",
+            "id": true,
+            "required": true,
+            "length": null,
+            "precision": 64,
+            "scale": 0,
+            "postgresql": {
+                "columnName": "id",
+                "dataType": "bigint",
+                "dataLength": null,
+                "dataPrecision": 64,
+                "dataScale": 0,
+                "nullable": "NO"
+            },
+            "_selectable": false
+        },
+        "modulationType": {
+            "type": "String",
+            "required": false,
+            "length": null,
+            "precision": null,
+            "scale": null,
+            "postgresql": {
+                "columnName": "modulation_type",
+                "dataType": "character varying",
+                "dataLength": null,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "modulationLevel": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 64,
+            "scale": 0,
+            "postgresql": {
+                "columnName": "modulation_level",
+                "dataType": "bigint",
+                "dataLength": null,
+                "dataPrecision": 64,
+                "dataScale": 0,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "symbolRate": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 64,
+            "scale": 0,
+            "postgresql": {
+                "columnName": "symbol_rate",
+                "dataType": "bigint",
+                "dataLength": null,
+                "dataPrecision": 64,
+                "dataScale": 0,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "packetSize": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 64,
+            "scale": 0,
+            "postgresql": {
+                "columnName": "packet_size",
+                "dataType": "bigint",
+                "dataLength": null,
+                "dataPrecision": 64,
+                "dataScale": 0,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "channelName": {
+            "type": "String",
+            "required": false,
+            "length": null,
+            "precision": null,
+            "scale": null,
+            "postgresql": {
+                "columnName": "channel_name",
+                "dataType": "character varying",
+                "dataLength": null,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "frequency": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 64,
+            "scale": 0,
+            "postgresql": {
+                "columnName": "frequency",
+                "dataType": "bigint",
+                "dataLength": null,
+                "dataPrecision": 64,
+                "dataScale": 0,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "minimizingPowerConsumption": {
+            "type": "String",
+            "required": false,
+            "length": null,
+            "precision": null,
+            "scale": null,
+            "postgresql": {
+                "columnName": "minimizing_power_consumption",
+                "dataType": "character varying",
+                "dataLength": null,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "maximumThroughput": {
+            "type": "String",
+            "required": false,
+            "length": null,
+            "precision": null,
+            "scale": null,
+            "postgresql": {
+                "columnName": "maximum_throughput",
+                "dataType": "character varying",
+                "dataLength": null,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        },
+        "minimumBer": {
+            "type": "String",
+            "required": false,
+            "length": null,
+            "precision": null,
+            "scale": null,
+            "postgresql": {
+                "columnName": "minimum_ber",
+                "dataType": "character varying",
+                "dataLength": null,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "YES"
+            },
+            "_selectable": true
+        }
+    },
+    "validations": [],
+    "relations": {
+        "cognitiveUsers": {
+            "type": "hasMany",
+            "model": "CognitiveUsers",
+            "foreignKey": "channelsDetailsId"
+        }
+    },
+    "acls": [],
+    "methods": []
+}
